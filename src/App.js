@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ToastProvider } from "react-toast-notifications";
+// import SubscribeToProduct from "./Components/SubscribeToProduct";
 
-function App() {
+import SubscribeToProduct from './components/SubscribeToProduct'
+
+// import { AppWrapper } from "./Components/Mystyles.js";
+import {AppWrapper} from './components/Mystyles'
+const App  = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <ToastProvider placement="bottom-center">
+        <SubscribeToProduct />
+      </ToastProvider>
+    </AppWrapper>
   );
-}
-
+};
 export default App;

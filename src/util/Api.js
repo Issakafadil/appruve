@@ -1,0 +1,20 @@
+/**
+ * API Request
+ * @param endPoint - api endpoint
+ * @param httpMethod - the http method defining the type of request (POST/GET/PUT/PATCH)
+ * @param bodyParams - object with properties being passed with the request
+ */
+
+export const apiRequest = async (
+)=> {
+  const response = await fetch(endPoint, {
+    method: httpMethod,
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(bodyParams)
+  });
+
+  return await response.json();
+};
